@@ -33,11 +33,18 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+:root {
+  --primary-color: #ffb600;
+  --primary-light-color: #ffd967;
+  --accent-color: #ff7f63;
+  --black: #000;
+  --white: #fff;
+  --background-color: #0a0a0a;
+}
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   max-width: 2500px;
   margin: 0 auto;
 }
@@ -101,7 +108,7 @@ header svg {
 
 .project {
   text-align: start;
-  background: #0a0a0a;
+  background: var(--background-color);
   border-radius: 10px;
   padding: 2rem;
 }
@@ -114,7 +121,7 @@ header svg {
 .skills span {
   background: #1e1e1e;
   border-radius: 8.5px;
-  color: #ffb600;
+  color: var(--primary-color);
   font-size: 10px;
   padding: 0.3rem;
 }
@@ -136,11 +143,15 @@ header svg {
 }
 
 .with-bg {
-  background: #0a0a0a;
+  background: var(--background-color);
 }
 
 .primary-gradient {
-  background: linear-gradient(90.13deg, #ffb600 49.01%, #ffd967 63.71%);
+  background: linear-gradient(
+    90.13deg,
+    var(--primary-color) 49.01%,
+    var(--primary-light-color) 63.71%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -168,11 +179,19 @@ header svg {
   transition: all 0.3s ease;
 }
 .btn-primary {
-  background: linear-gradient(90deg, #ffb600 -0.13%, #ff7f63 100.17%);
-  color: #000000;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) -0.13%,
+    var(--accent-color) 100.17%
+  );
+  color: var(--black);
 }
 .btn-secondary {
-  background: linear-gradient(90.13deg, #ffb600 49.01%, #ffd967 63.71%);
+  background: linear-gradient(
+    90.13deg,
+    var(--primary-color) 49.01%,
+    var(--primary-light-color) 63.71%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
